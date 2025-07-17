@@ -1,0 +1,17 @@
+# Ignore compiled binaries
+*.exe
+*.out
+*.o
+
+# Dependency directories
+vendor/
+
+# IDE/editor stuff
+.vscode/
+.idea/
+
+# OS generated
+.DS_Store
+
+# Go stuff
+go.sum
