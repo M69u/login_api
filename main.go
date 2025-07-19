@@ -5,9 +5,8 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 
 	"login_rest_api/config"
-	"login_rest_api/handlers"
+	"login_rest_api/routes"
 )
-
 
 func main() {
 
@@ -21,11 +20,8 @@ func main() {
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
-	// Define routes
-	e.POST("/register", handlers.RegisterUser)
-	e.POST("/login", handlers.LoginUser)
+	routes.RegisterRoutes(e)
 
 	// Start server
 	e.Logger.Fatal(e.Start(":8080"))
 }
-
